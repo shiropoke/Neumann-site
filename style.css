@@ -1,0 +1,76 @@
+/* ===== ベース設定 ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+  line-height: 1.7;
+  color: #333;
+  background: #fafafa;
+  scroll-behavior: smooth;
+  padding-bottom: 4rem;
+}
+
+/* ===== ヘッダー ===== */
+header {
+  background: #1e90ff;
+  color: #fff;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+header h1 { font-size: 1.5rem; margin-bottom: .5rem; }
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1rem;
+  list-style: none;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: .25rem .5rem;
+  border-radius: 4px;
+}
+nav a.active,
+nav a:hover { background: rgba(255,255,255,.2); }
+
+/* ===== セクション ===== */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+section { margin-bottom: 3rem; }
+section h2 {
+  font-size: 1.6rem;
+  border-left: 8px solid #1e90ff;
+  padding-left: .5rem;
+  margin-bottom: 1rem;
+}
+
+/* タイムライン風リスト */
+.timeline li {
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 1.25rem;
+}
+.timeline li::before {
+  content: "●";
+  color: #1e90ff;
+  position: absolute;
+  left: 0;
+  top: .15rem;
+}
+
+/* リンク */
+a { color: #1e90ff; }
+a:hover { text-decoration: underline; }
+
+/* フッター */
+footer { text-align: center; font-size: .9rem; color: #666; }
+
+/* レスポンシブ */
+@media (max-width: 600px) {
+  header h1 { font-size: 1.2rem; }
+  nav ul { flex-direction: column; }
+}
